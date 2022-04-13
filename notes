@@ -1,0 +1,1 @@
+yarn add axios express nodemon sequelize tedious cors --save
