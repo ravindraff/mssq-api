@@ -17,6 +17,7 @@ app.use(express.json());  /* bodyParser.json() is deprecated */
 app.use(express.urlencoded({ extended: true }));   /* bodyParser.urlencoded() is deprecated */
 
 const db = require("./app/models");
+const productsRoutes = require("./app/routes/products.routes");
 
 db.sequelize.sync();
 // // drop the table if it already exists
@@ -30,6 +31,7 @@ app.get("/", (req, res) => {
 });
 
 require("./app/routes/turorial.routes")(app);
+require("./app/routes/products.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

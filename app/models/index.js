@@ -20,5 +20,5 @@ db.sequelize = sequelize;
 
 db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
 db.materials = require("./materials.model.js")(sequelize, Sequelize);
-
+db.products = require("./products.model.js")(sequelize,Sequelize)
 module.exports = db;
